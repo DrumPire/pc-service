@@ -12,10 +12,8 @@ export const accordeon = () => {
     title.addEventListener('click', () => {
       contentsDescr.forEach(tab => {
         if (tab === descr) {
-          tab.classList.add('active');
           tab.style.height = tab.scrollHeight + 'px';
         } else {
-          tab.classList.remove('active');
           tab.style.height = 0;
         }
       });
