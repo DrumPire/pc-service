@@ -19,7 +19,7 @@ export const timer = () => {
  
   const updateTimer = () => {
     const date = new Date();
-    const dateDeadliine = new Date('25 april 2022').getTime();
+    const dateDeadliine = new Date('26 april 2023').getTime();
     const timeRemaining = (dateDeadliine - date) / 1000;
 
     const deys = Math.floor(timeRemaining / 60 / 60 / 24);
@@ -45,17 +45,22 @@ export const timer = () => {
     if (timeRemaining <= 0) {
       clearInterval(interval);
 
-      daysBlock.textContent = '00';
       daysBlock.style.color = 'red';
+      daysBlock.textContent = '00';
+      daysBlock.nextElementSibling.textContent = 'дней';
 
-      hoursBlock.textContent = '00';
+
       hoursBlock.style.color = 'red';
+      hoursBlock.textContent = '00';
+      hoursBlock.nextElementSibling.textContent = 'часов';
 
-      minutesBlock.textContent = '00';
       minutesBlock.style.color = 'red';
+      minutesBlock.textContent = '00';
+      minutesBlock.nextElementSibling.textContent = 'минут';
 
-      secondsBlock.textContent = '00';
       secondsBlock.style.color = 'red';
+      secondsBlock.textContent = '00';
+      secondsBlock.nextElementSibling.textContent = 'секунд';
     }
   }
   
